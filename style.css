@@ -26,6 +26,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .nav-links {
@@ -77,15 +78,10 @@ body {
 }
 
 /* Common Content Styles */
-.box {
+.box, .box1 {
     max-width: 1200px;
+    width: 100%;
     margin: 110px auto 32px;
-    padding: 24px;
-    text-align: center;
-}
-
-.box1 {
-    max-width: 1200px;
     padding: 24px;
     text-align: center;
 }
@@ -424,17 +420,17 @@ strong {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-top: 4px solid #b5a0cc;
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
 
-.form {
+.form-group {
     margin-bottom: 24px;
     text-align: left;
 }
 
-label {
+.form-group label {
     display: block;
     font-weight: 500;
     color: #4b3d60;
@@ -442,7 +438,8 @@ label {
     font-size: 16px;
 }
 
-input, textarea {
+.form-group input, 
+.form-group textarea {
     width: 100%;
     padding: 14px;
     border: 2px solid #c5b3e0;
@@ -452,23 +449,20 @@ input, textarea {
     font-size: 16px;
 }
 
-input:focus, textarea:focus {
+.form-group input:focus, 
+.form-group textarea:focus {
     outline: none;
     border-color: #a992c7;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(169, 146, 199, 0.4);
 }
 
-textarea {
+.form-group textarea {
     resize: vertical;
     min-height: 180px;
 }
 
-.form {
-    margin-bottom: 24px;
-}
-
-.btn {
+.btn-submit {
     background-color: #6d5a8e;
     color: white;
     border: none;
@@ -480,11 +474,11 @@ textarea {
     transition: all 0.3s ease;
     width: auto;
     min-width: 200px;
-    margin-top: 16px;
+    margin: 16px auto 0;
     display: block;
 }
 
-.btn:hover {
+.btn-submit:hover {
     background-color: #5d4a72;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(93, 74, 114, 0.25);
@@ -514,7 +508,7 @@ textarea {
     border-radius: 50%;
 }
 
-/* Laptop/Desktop (1024px and up) */
+/* Responsive Adjustments */
 @media (min-width: 1024px) {
     .contact-form {
         max-width: 800px;
@@ -526,13 +520,27 @@ textarea {
     }
 }
 
-/* Mobile (480px and below) */
+@media (max-width: 768px) {
+    .box, .box1 {
+        margin: 100px auto 24px;
+        padding: 16px;
+    }
+    
+    .contact-form {
+        padding: 24px;
+    }
+    
+    .btn-submit {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 480px) {
     .navbar {
         flex-direction: column;
         padding: 12px 16px;
         gap: 12px;
-        height: auto;
     }
     
     .name {
@@ -540,7 +548,6 @@ textarea {
         width: 100%;
         text-align: center;
         margin: 0;
-        font-size: 18px;
         padding-bottom: 8px;
     }
     
@@ -562,29 +569,17 @@ textarea {
         min-width: 80px;
     }
     
-    .box {
-        margin: 160px auto 24px;
+    .box, .box1 {
+        margin: 140px auto 20px;
         padding: 16px;
-        max-width: 95%;
-    }
-    .box1 {
-        padding: 16px;
-        max-width: 95%;
     }
     
     h1 {
         font-size: 28px;
-        margin-bottom: 24px;
     }
     
     h2 {
         font-size: 20px;
-        margin: 24px 0 16px;
-    }
-    
-    p {
-        font-size: 15px;
-        line-height: 1.6;
     }
     
     .pic {
@@ -608,71 +603,21 @@ textarea {
         padding: 20px;
     }
     
-    .skill-table h2 {
-        font-size: 20px;
-        margin-bottom: 16px;
-    }
-    
     .skill {
         font-size: 16px;
         padding: 12px;
-        margin: 10px 0;
     }
     
-    .certificate-img {
-        height: 160px;
-        padding: 12px;
-    }
-    
-    .contact-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-    
-    .image {
-        width: 160px;
-        height: 160px;
-        padding: 12px;
-    }
-    
-    .project-title {
-        font-size: 20px;
-    }
-    
-    .project-description {
-        font-size: 14px;
-    }
-    
-    .project-image {
-        max-width: 110px;
-    }
-    
-    .features {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-    
-    .file-button {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-    
-    /* Contact Form Mobile Adjustments */
     .contact-form {
-        width: 95%;
         padding: 20px;
     }
     
-    .form {
-        margin-bottom: 20px;
-    }
-    
-    label {
+    .form-group label {
         font-size: 14px;
-        margin-bottom: 6px;
     }
     
-    input, textarea {
+    .form-group input,
+    .form-group textarea {
         padding: 10px 12px;
         font-size: 14px;
     }
@@ -681,17 +626,14 @@ textarea {
         min-height: 120px;
     }
     
-    .btn {
+    .btn-submit {
         width: 100%;
-        max-width: none;
         padding: 12px;
         font-size: 14px;
-        margin-top: 12px;
     }
     
     .social-media {
         gap: 16px;
-        margin: 24px 0;
     }
     
     .social-media a {
