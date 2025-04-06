@@ -522,7 +522,7 @@ strong {
 
 @media (max-width: 768px) {
     .box, .box1 {
-        margin: 100px auto 24px;
+        margin: 120px auto 24px; /* Increased from 100px to 120px */
         padding: 16px;
     }
     
@@ -537,10 +537,15 @@ strong {
 }
 
 @media (max-width: 480px) {
+    html {
+        scroll-padding-top: 140px; /* Added for anchor links */
+    }
+    
     .navbar {
         flex-direction: column;
         padding: 12px 16px;
         gap: 12px;
+        height: auto;
     }
     
     .name {
@@ -570,7 +575,7 @@ strong {
     }
     
     .box, .box1 {
-        margin: 140px auto 20px;
+        margin: 160px auto 20px; /* Increased from 140px to 160px */
         padding: 16px;
     }
     
@@ -639,5 +644,25 @@ strong {
     .social-media a {
         width: 36px;
         height: 36px;
+    }
+}
+
+/* Extra small devices (phones, 380px and down) */
+@media (max-width: 380px) {
+    html {
+        scroll-padding-top: 160px; /* Increased for very small screens */
+    }
+    
+    .box, .box1 {
+        margin: 180px auto 20px; /* Increased for very small screens */
+    }
+    
+    .navbar {
+        padding: 10px 12px;
+    }
+    
+    .navbar a {
+        font-size: 13px;
+        padding: 6px 10px;
     }
 }
