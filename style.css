@@ -541,6 +541,7 @@ strong {
         flex-direction: column;
         padding: 12px 16px;
         gap: 12px;
+        margin:20px;
     }
     
     .name {
@@ -567,7 +568,6 @@ strong {
         flex-grow: 1;
         text-align: center;
         min-width: 80px;
-        margin:20px;
     }
     
     .box, .box1 {
