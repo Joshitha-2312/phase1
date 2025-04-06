@@ -567,6 +567,7 @@ strong {
         flex-grow: 1;
         text-align: center;
         min-width: 80px;
+        margin:20px;
     }
     
     .box, .box1 {
