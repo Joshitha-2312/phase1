@@ -40,3 +40,5 @@ Colors: Mostly purple and white, making it look clean and professional.
 Fonts: Easy-to-read text with nice headings.
 
 Mobile-Friendly: Works well on phones and tablets too.
+# Live Link
+Link - https://joshitha-2312.github.io/phase1/
