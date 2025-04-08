@@ -413,7 +413,7 @@ strong {
     font-size: 15px;
 }
 
-/* Updated Contact Form Section */
+
 .contact-form {
     background: #f1ebf8;
     padding: 32px;
@@ -508,7 +508,6 @@ strong {
     border-radius: 50%;
 }
 
-/* Responsive Adjustments */
 @media (min-width: 1024px) {
     .contact-form {
         max-width: 800px;
@@ -522,7 +521,7 @@ strong {
 
 @media (max-width: 768px) {
     .box, .box1 {
-        margin: 120px auto 24px; /* Increased from 100px to 120px */
+        margin: 120px auto 24px; 
         padding: 16px;
     }
     
@@ -538,7 +537,7 @@ strong {
 
 @media (max-width: 480px) {
     html {
-        scroll-padding-top: 140px; /* Added for anchor links */
+        scroll-padding-top: 140px; 
     }
     
     .navbar {
@@ -575,7 +574,7 @@ strong {
     }
     
     .box, .box1 {
-        margin: 160px auto 20px; /* Increased from 140px to 160px */
+        margin: 160px auto 20px; 
         padding: 16px;
     }
     
@@ -646,15 +645,13 @@ strong {
         height: 36px;
     }
 }
-
-/* Extra small devices (phones, 380px and down) */
 @media (max-width: 380px) {
     html {
-        scroll-padding-top: 160px; /* Increased for very small screens */
+        scroll-padding-top: 160px; 
     }
     
     .box, .box1 {
-        margin: 180px auto 20px; /* Increased for very small screens */
+        margin: 180px auto 20px; 
     }
     
     .navbar {
